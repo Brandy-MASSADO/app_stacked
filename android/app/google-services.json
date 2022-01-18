@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1084170873911",
+    "project_id": "projetflutter-e5a28",
+    "storage_bucket": "projetflutter-e5a28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084170873911:android:e250f0a213202625fb63b2",
+        "android_client_info": {
+          "package_name": "brandy.massado.app_stacked"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084170873911-hd0s75e2518h0es55csi75b0sihsrqvo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "brandy.massado.app_stacked",
+            "certificate_hash": "9426f82da28d7d9386b773491d19e94957eba8ff"
+          }
+        },
+        {
+          "client_id": "1084170873911-salecnn1qntumd14id2dklcqaih911ma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLOzEpkMziQVFgfKqbmEiS9fNwxmfiUiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084170873911-salecnn1qntumd14id2dklcqaih911ma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
