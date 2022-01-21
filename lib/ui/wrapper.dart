@@ -1,5 +1,5 @@
 import 'package:app_stacked/ui/content/content_view.dart';
-import 'package:app_stacked/ui/homepage/homepage_view.dart';
+import 'package:app_stacked/screens/connexion/homepage_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

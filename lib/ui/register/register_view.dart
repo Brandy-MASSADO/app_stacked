@@ -1,5 +1,5 @@
 import 'package:app_stacked/di/dependency_graph.dart';
-import 'package:app_stacked/ui/homepage/homepage_viewmodel.dart';
+import 'package:app_stacked/controllers/connection/homepage_viewmodel.dart';
 import 'package:app_stacked/ui/register/register_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -46,7 +46,8 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                       ),
                     ),
                   ),
-                  TextField(
+                  Container(margin: const EdgeInsets.only(bottom: 20),
+                    child: TextField(
                     //obscureText: true,
                     controller: viewModel.pseudoController,
                     onSubmitted: (value) => viewModel.verifyPseudo(value),
@@ -54,6 +55,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                       border: OutlineInputBorder(),
                       labelText: 'Pseudo',
                     )
+                   ),
                   ),
                   Container(
                     margin: const EdgeInsets.only(bottom: 20),

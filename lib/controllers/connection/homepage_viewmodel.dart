@@ -16,9 +16,6 @@ class HomepageViewModel extends BaseViewModel {
   TextEditingController _emailController = TextEditingController();
   TextEditingController get emailController => _emailController;
 
-  TextEditingController _pseudoController = TextEditingController();
-  TextEditingController get pseudoController => _pseudoController;
-
   TextEditingController _passwordController = TextEditingController();
   TextEditingController get passwordController => _passwordController;
 
@@ -29,7 +26,7 @@ class HomepageViewModel extends BaseViewModel {
     bool pseu = RegExp(r"").hasMatch(value);
 
     if (!emailValid || !pseu) {
-      _displayedError = "Veuillez entrer un email ou pseudo valide";
+      _displayedError = "Veuillez entrer un email valide";
       notifyListeners();
     } else {
       _displayedError = "";
@@ -37,21 +34,6 @@ class HomepageViewModel extends BaseViewModel {
     }
 
     return emailValid;
-  }
-
-  bool verifyPseudo(String value) {
-    bool isValid = true;
-
-    if (value.length < 2) {
-      isValid = false;
-      _displayedError = "Ton pseudo trop court";
-      notifyListeners();
-    } else {
-      _displayedError = "";
-      notifyListeners();
-    }
-
-    return isValid;
   }
 
   bool verifyPassword(String value) {

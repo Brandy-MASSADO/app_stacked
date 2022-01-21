@@ -9,7 +9,7 @@ import 'package:injectable/injectable.dart' as _i2;
 
 import '../services/authenticationService.dart' as _i3;
 import '../ui/content/content_viewmodel.dart' as _i4;
-import '../ui/homepage/homepage_viewmodel.dart' as _i5;
+import '../controllers/connection/homepage_viewmodel.dart' as _i5;
 import '../ui/register/register_viewmodel.dart'
     as _i6; // ignore_for_file: unnecessary_lambdas
 

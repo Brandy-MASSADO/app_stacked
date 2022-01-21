@@ -1,5 +1,6 @@
 import 'package:app_stacked/di/dependency_graph.dart';
-import 'package:app_stacked/ui/homepage/homepage_viewmodel.dart';
+import 'package:app_stacked/controllers/connection/homepage_viewmodel.dart';
+import 'package:app_stacked/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -37,11 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       controller: viewModel.emailController,
                       onSubmitted: (value) {
                         viewModel.verifyEmail(value);
-                        viewModel.verifyPseudo(value);
                       },
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: 'Email ou Pseudo',
+                        labelText: 'Email',
                       ),
                     ),
                   ),
@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   RaisedButton(
-                    onPressed: () => viewModel.login(context),
+                    onPressed: () => WelcomeScreen(),
                     child: const Text('Submit'),
                   ),
                   Padding(
