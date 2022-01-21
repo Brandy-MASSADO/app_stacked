@@ -2,7 +2,9 @@ import 'package:app_stacked/di/dependency_graph.dart';
 import 'package:app_stacked/controllers/connection/homepage_viewmodel.dart';
 import 'package:app_stacked/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:stacked/stacked.dart';
+import 'package:websafe_svg/websafe_svg.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -18,11 +20,16 @@ class _MyHomePageState extends State<MyHomePage> {
       viewModelBuilder: () => locator<HomepageViewModel>(),
       builder: (context, viewModel, child) {
         return Scaffold(
+          
           appBar: AppBar(
             title: const Text("MyLoginPage"),
           ),
-          body: Center(
-            child: Padding(
+          body: Stack(
+            children: [
+               WebsafeSvg.asset("assets/icons/image22resize.svg", fit: BoxFit.fill),
+
+              SafeArea(
+                child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   RaisedButton(
-                    onPressed: () => WelcomeScreen(),
+                    onPressed: () => Get.to(WelcomeScreen()),
                     child: const Text('Submit'),
                   ),
                   Padding(
@@ -69,6 +76,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+              ),
+              
+            ],
+            
           ),
         );
       },
